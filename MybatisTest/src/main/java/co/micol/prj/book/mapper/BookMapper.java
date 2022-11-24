@@ -2,6 +2,7 @@ package co.micol.prj.book.mapper;
 
 import java.util.List;
 
+import co.micol.prj.board.vo.BoardVO;
 import co.micol.prj.book.vo.BookFileVO;
 import co.micol.prj.book.vo.BookVO;
 
@@ -13,4 +14,5 @@ public interface BookMapper {
 	int bookUpdate(BookVO vo);      //도서변경(U)updateBo
 	int bookInsertImage(BookFileVO vo); //도서이미지 저장
 	int bookCode();  //마지막 시퀀스 찾기
+	
 }

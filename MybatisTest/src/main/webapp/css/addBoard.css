@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+#boardForm {
+	margin-top: 30px;
+	border: 1px solid black;
+	width: 30%;
+	padding: 20px;
+	font-size: 1.5em;
+	height:250px;
+	margin-bottom:30px;
+}
+
+#boardForm div {
+	text-align: left;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.addBoardLabel {
+	margin-bottom: 20px;
+	margin-left: 30px;
+	text-align: center;
+	width: 17%;
+	border-radius: 20px;
+	background-color: #64b9b2;
+	margin-right:15px;
+	color:white;
+}
+
+#boardForm #title {
+	width: 60%;
+	height: 25px;
+}
+
+#boardForm #content {
+	width: 60%;
+	height: 75px;
+	margin-bottom: 20px;
+}
+
+#boardForm #writer {
+	width: 45%;
+	height: 25px;
+}
+
+#formBtn{
+	margin-left: 142px;
+}
+#formBtn button{
+	width:90px;
+	margin-right:10px;
+	background: #eee;
+	border: 0;
+	border-radius:5px;
+	font-size:0.7em;
+	padding:10px;
+
+}
+
+#boardList{
+	width:35%;
+}
+table{
+	width: -webkit-fill-available;
+	border-collapse: collapse;
+	border-bottom: 2px solid #aaa;
+}
+#boardList thead{
+	position:relative;
+	background: #eee;
+	width:inherit;
+	border:0;
+
+	
+}
+tr{
+	border-top:1px solid #aaa;
+	height:40px;
+}

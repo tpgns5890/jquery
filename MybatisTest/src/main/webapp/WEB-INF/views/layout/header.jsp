@@ -13,6 +13,7 @@
 		<ul>
 			<li><a class="menuLink" href="main.do">Home</a></li>	
 			<li><a class="menuLink" href="ajaxJquery.do">Book</a></li>				
+			<li><a class="menuLink" href="addBoard.do">board</a></li>				
 			<li><a class="menuLink" href="noticeForm.do">Content</a></li>
 			<c:if test="${respsibility eq 'admin' }">
 				<li><a class="menuLink" href="memberList.do">Member</a></li>

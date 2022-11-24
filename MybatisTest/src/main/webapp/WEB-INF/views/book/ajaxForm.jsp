@@ -28,7 +28,7 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="./js/ajaxjquery.js"></script>
+<script src="./js/addboard.js"></script>
 
 <div id="header">
 	<form name="myfrm" action="">

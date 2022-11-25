@@ -13,7 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.prj.board.command.AddBoard;
 import co.micol.prj.board.command.AjaxBoardAdd;
+import co.micol.prj.board.command.AjaxReplyDelete;
 import co.micol.prj.board.command.AjaxBoardList;
+import co.micol.prj.board.command.AjaxBoardSelect;
+import co.micol.prj.board.command.AjaxReplyAdd;
+import co.micol.prj.board.command.AjaxReplyList;
 import co.micol.prj.board.command.SelectBoard;
 import co.micol.prj.book.command.AjaxBookAdd;
 import co.micol.prj.book.command.AjaxBookDelete;
@@ -79,6 +83,10 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxBoardList.do", new AjaxBoardList());
 		map.put("/ajaxBoardAdd.do", new AjaxBoardAdd());
 		map.put("/selectBoard.do", new SelectBoard());
+		map.put("/ajaxBoardSelect.do", new AjaxBoardSelect());
+		map.put("/ajaxReplyList.do", new AjaxReplyList());
+		map.put("/ajaxReplyDelete.do", new AjaxReplyDelete());
+		map.put("/ajaxReplyAdd.do", new AjaxReplyAdd());
 	}
 
 	//요청을 분석하고 실행, 결과를 돌려주는 곳

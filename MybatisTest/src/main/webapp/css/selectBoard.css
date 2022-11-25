@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+#boardSelectArea {
+	margin-top: 40px;
+	width: 60%;
+	height: 300px;
+	border: 1px solid black;
+	text-align: left;
+	padding:10px 0;
+}
+
+#boardSelectArea p {
+	display: inline-block;
+	padding-top: 3.5px;
+}
+
+.labelSpan {
+	display: inline-block;
+	background-color: #ddd;
+	border-radius: 10px;
+	padding: 10px;
+	width: 70px;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: 10px;
+	vertical-align: top;
+}
+
+#boardSelectArea div {
+	height: 180px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#titleP {
+	width: 80%;
+}
+
+#contentP {
+	width: 80%;
+}
+
+#writerP {
+	width: 30%;
+}
+
+#replyArea {
+	width: 50%;
+}
+
+#replyUl {
+	list-style: none;
+	padding: 0;
+	text-align: left;
+	margin:30px auto;
+}
+
+#replyUl li {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #555;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+#replyUl div {
+	text-align: center;
+    width: 18%;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.repSection1{
+	background-color: #ddd;
+	margin: 2px 0;
+	border-radius:5px;
+}
+
+#replyContent {
+	text-align: left;
+	display: inline-block;
+	width: 72%;
+	vertical-align: super;
+	padding-left:20px;
+}
+
+#deleteRepBtn {
+	background-color: #ddd;
+	text-align: center;
+	border:0;
+	padding:5px 10px;
+	border-radius:5px;
+}
+
+#addReply #replyInput{
+	width:25%;
+	height:100px;
+	box-shadow: 4px 4px 8px #bbb;
+	border: 0.5px solid #bbb;
+}
+
+#addReplyBtn{
+	background-color: #4AA8D8;
+	border:0;
+	border-radius:3px;
+	margin-left:30px;
+	width:5%;
+	padding:10px 0;
+	color: white;
+	font-size:1em;
+}

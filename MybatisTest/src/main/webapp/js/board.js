@@ -1,26 +1,23 @@
-/**
- * 
- */
-
 $(function() {
 	$.ajax({
 		url: 'ajaxBoardList.do',
-		method: 'get',
+		method: 'post',
 		dataType: 'json',
 		success: function(result) {
-			console.log(result)
 			$.each(result, function(idx) {
 				$('#boardTbody').append(makeTr(result[idx]));
 			});
 			$("#boardTbody tr").on('click',function() {
-				let boardNo = $(this).children().eq(0).text();
-				location.href = 'selectBoard.do?boardNo=' + boardNo;
+				let boardNo = $(this).children().eq(0).val();
+				console.log($(this).children().eq(0).val());
+				location.href='selectBoard.do?boardNo='+boardNo;
 			});
 		},
 		error: function(error) {
 			console.log(error);
 		}
 	});
+	
 	$('#addBoardBtn').on('click', insertBoard);
 });
 
@@ -33,10 +30,6 @@ function makeTr(board = { boardNo: "", title: "", writer: ""}) {
 }
 
 function insertBoard() {
-	let title = $('input[name="title"]').val();
-	let content = $('input[name="content"]').val();
-	let writer = $('input[name="writer"]').val();
-	
 	$.ajax({
 		url: 'ajaxBoardAdd.do',
 		method: 'post',

@@ -13,4 +13,24 @@
 		VALUES(BOARD_SEQ.NEXTVAL, #{title}, #{content}, #{writer}, SYSDATE, 0, NULL)
 	</insert>
 	
+	<select id="selectBoard" resultType="co.micol.prj.board.vo.BoardVO">
+		SELECT * FROM TBL_BOARD WHERE BOARD_NO = #{boardNo}
+	</select>
+	
+	<select id="replyList" resultType="co.micol.prj.board.vo.ReplyVO">
+		SELECT * FROM TBL_REPLY WHERE BOARD_NUM = #{boardNo}
+	</select>
+	
+	<delete id="repDelete" parameterType="co.micol.prj.board.vo.ReplyVO">
+		DELETE FROM TBL_REPLY WHERE REP_NUM = #{repNum}
+	</delete>
+	
+	<insert id="repInsert" parameterType="co.micol.prj.board.vo.ReplyVO">
+		INSERT INTO TBL_REPLY
+		VALUES (REP_SEQ.NEXTVAL, #{boardNum}, #{repContent}, #{repWriter}, sysdate)
+	</insert>
+	
+	<select id="getRepNum" resultType="co.micol.prj.board.vo.ReplyVO">
+		SELECT rep_seq.CURRVAL FROM DUAL;
+	</select>
 </mapper>

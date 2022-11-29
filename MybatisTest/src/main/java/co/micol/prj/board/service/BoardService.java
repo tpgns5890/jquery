@@ -13,6 +13,4 @@ public interface BoardService {
 	int repDelete(int repNum);
 	void repInsert(ReplyVO vo);
 	int getRepNum();
-
-
 }

@@ -95,20 +95,20 @@ function makeTr(book = { bookCode: "", bookTitle: "", bookAuthor: "", bookPress:
 		$('<td/>').append($('<button/>').text('삭제').on('click', book, deleteFrm))
 	).on('click', function() {
 		$('#id01').css('display', 'block');
-		
+
 		localStorage.setItem('code', book.bookCode);
 		localStorage.setItem('title', book.bookTitle);
 		localStorage.setItem('author', book.bookAuthor);
 		localStorage.setItem('press', book.bookPress);
 		localStorage.setItem('price', book.bookPrice);
-		
+
 		$('.container input[name="bCode"]').val(book.bookCode);
 		$('.container input[name="bTitle"]').val(book.bookTitle).on('change', function() { localStorage.setItem('title', $(this).val()) });
 		$('.container input[name="bAuthor"]').val(book.bookAuthor).on('change', function() { localStorage.setItem('author', $(this).val()) });
 		$('.container input[name="bPress"]').val(book.bookPress).on('change', function() { localStorage.setItem('press', $(this).val()) });
 		$('.container input[name="bPrice"]').val(book.bookPrice).on('change', function() { localStorage.setItem('price', $(this).val()) });
 		$('.container .okBtn').on('click', book, modifyModal);
-		
+
 		//$(this).parentsUntil('#list').replaceWith(newTr);
 	})
 }
@@ -131,7 +131,7 @@ function modifyFrm(e) {
 
 	$(this).parentsUntil('#list').replaceWith(newTr);
 }
-function modifyModal(e){
+function modifyModal(e) {
 	let code = localStorage.getItem('code');
 	let title = localStorage.getItem('title');
 	let author = localStorage.getItem('author');

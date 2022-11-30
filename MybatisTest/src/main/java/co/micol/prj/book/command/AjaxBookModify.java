@@ -26,8 +26,9 @@ public class AjaxBookModify implements Command {
 		vo.setBookAuthor(author);
 		vo.setBookPress(press);
 		vo.setBookPrice(Integer.parseInt(price));
-		String json = null;
 		int result = service.bookUpdate(vo);
+		
+		String json = null;
 		if(result > 0) {
 			json = "Success";
 		}else {

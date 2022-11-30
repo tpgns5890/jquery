@@ -30,6 +30,11 @@ import co.micol.prj.book.command.bookInsert;
 import co.micol.prj.book.command.bookInsertForm;
 import co.micol.prj.cart.command.AjaxCartList;
 import co.micol.prj.common.Command;
+import co.micol.prj.emp.command.AjaxEmpDelete;
+import co.micol.prj.emp.command.AjaxEmpInsert;
+import co.micol.prj.emp.command.AjaxEmpList;
+import co.micol.prj.emp.command.AjaxEmpUpdate;
+import co.micol.prj.emp.command.AjaxJobOption;
 import co.micol.prj.main.MainCommand;
 import co.micol.prj.member.command.AjaxIdCheck;
 import co.micol.prj.member.command.Logout;
@@ -90,6 +95,12 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxReplyAdd.do", new AjaxReplyAdd());
 		
 		map.put("/ajaxCartList.do", new AjaxCartList()); //ajax데이터
+		
+		map.put("/ajaxEmpList.do", new AjaxEmpList());
+		map.put("/ajaxEmpDelete.do", new AjaxEmpDelete());
+		map.put("/ajaxEmpInsert.do", new AjaxEmpInsert());
+		map.put("/ajaxEmpUpdate.do", new AjaxEmpUpdate());
+		map.put("/ajaxJobOption.do", new AjaxJobOption());
 	}
 
 	//요청을 분석하고 실행, 결과를 돌려주는 곳
